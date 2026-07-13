@@ -24,7 +24,7 @@ gh auth login
 ./scripts/publish-website.sh
 ```
 
-Repo: **mertsavas/taksitdefter.app** (public)
+Repo: **mertsavas97-spec/taksitdefter.app** (public)
 
 ### GitHub Pages ayarı
 
@@ -45,6 +45,6 @@ Domain sağlayıcında apex (`taksitdefter.app`) için GitHub A kayıtları:
 
 ## App Store URL’leri
 
-- Privacy: https://taksitdefter.app/gizlilik/
-- Support: https://taksitdefter.app/destek/
-- Marketing: https://taksitdefter.app/
+- Privacy: https://mertsavas97-spec.github.io/taksitdefter.app/gizlilik/
+- Support: https://mertsavas97-spec.github.io/taksitdefter.app/destek/
+- Marketing: https://mertsavas97-spec.github.io/taksitdefter.app/
