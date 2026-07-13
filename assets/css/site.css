@@ -1,0 +1,268 @@
+/* TaksitDefter — marketing site (App Store / KVKK) */
+:root {
+  --canvas: #0c0e12;
+  --surface: #161a22;
+  --surface-elevated: #1e2430;
+  --border: #2a3140;
+  --text: #f4f6fa;
+  --text-secondary: #8b95a8;
+  --text-muted: #6b7589;
+  --accent: #3ddba3;
+  --accent-warm: #e8a838;
+  --max: 720px;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  background: var(--canvas);
+  background-image: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(61, 219, 163, 0.08), transparent);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(12, 14, 18, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+.site-header-inner {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.875rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.05rem;
+}
+
+.brand:hover {
+  text-decoration: none;
+}
+
+.brand img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 1rem;
+  font-size: 0.875rem;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  padding: 0.25rem 0;
+}
+
+.nav a:hover,
+.nav a[aria-current='page'] {
+  color: var(--accent);
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 2.5rem 0 3rem;
+}
+
+.hero-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 20px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 8px 32px rgba(61, 219, 163, 0.12);
+}
+
+.hero h1 {
+  font-size: clamp(1.75rem, 5vw, 2.25rem);
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.02em;
+}
+
+.tagline {
+  font-size: 1.125rem;
+  color: var(--accent);
+  margin: 0 0 1rem;
+  font-weight: 500;
+}
+
+.lead {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 32rem;
+  margin: 0 auto 2rem;
+}
+
+.card-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+@media (min-width: 560px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.25rem;
+}
+
+.card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.disclaimer-banner {
+  background: var(--surface-elevated);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent-warm);
+  border-radius: 8px;
+  padding: 1rem 1.125rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin: 2rem 0;
+}
+
+.legal-doc h1 {
+  font-size: 1.75rem;
+  margin: 0 0 0.5rem;
+}
+
+.legal-meta {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+  margin-bottom: 2rem;
+}
+
+.legal-doc h2 {
+  font-size: 1.125rem;
+  margin: 2rem 0 0.75rem;
+  color: var(--accent);
+}
+
+.legal-doc h3 {
+  font-size: 1rem;
+  margin: 1.25rem 0 0.5rem;
+}
+
+.legal-doc p,
+.legal-doc li {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.legal-doc ul {
+  padding-left: 1.25rem;
+}
+
+.legal-doc li {
+  margin-bottom: 0.35rem;
+}
+
+.contact-box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+}
+
+.contact-box a {
+  font-weight: 600;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 0;
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item strong {
+  display: block;
+  color: var(--text);
+  margin-bottom: 0.35rem;
+}
+
+.faq-item p {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  padding: 2rem 1.25rem;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8125rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}
+
+.site-footer a {
+  color: var(--text-secondary);
+}
