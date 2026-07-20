@@ -5,6 +5,7 @@ Statik web sitesi: App Store Connect için gerekli yasal sayfalar.
 | URL | Sayfa |
 |-----|-------|
 | `/` | Ana sayfa |
+| `/app-ads.txt` | AdMob doğrulama (IAB) |
 | `/gizlilik/` | Gizlilik + KVKK |
 | `/destek/` | Destek + SSS |
 | `/kullanim-kosullari/` | Kullanım koşulları |
